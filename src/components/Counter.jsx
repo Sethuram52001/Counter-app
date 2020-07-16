@@ -6,6 +6,21 @@ class Counter extends React.Component {
 		//tags: ['tag1','tag2','tag3'],
 	};*/
 
+	componentDidUpdate(prevProps,prevState){
+		//to get additional ajax reqs
+		console.log('prevProps',prevProps);
+		console.log('prevState',prevState);
+		/*if(prevProps.counter.value !== this.this.props.counter.value)
+		{
+			//ajax call and get new data from the server
+		}*/
+	}
+
+	componentWillUnmount()
+	{
+		console.log('Counter-unmounted');
+	}
+
 	formatCount()
 	{
 		const count =this.props.counter.value;
@@ -29,6 +44,7 @@ class Counter extends React.Component {
 	};*/
 
 	render() {
+		console.log("Counter rendered");
 		//console.log('props',this.props);
 		return (
 			<div>
